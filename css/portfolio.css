@@ -17,12 +17,13 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Ubuntu", sans-serif;
+  gap: 5px;
 }
 .name-box {
-  width: 100px;
+  width: 120px;
   height: 40px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
   text-align: right;
   position: relative;
 }
@@ -65,9 +66,9 @@ body {
   width: 100%;
   height: 100%;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 40px;
   color: #0a7241;
-  padding: 10px 5px;
+  padding: 15px 5px;
 }
 .scroll-item:first-child,
 .scroll-item:last-child {
@@ -75,7 +76,7 @@ body {
 }
 
 .scroll-inner {
-  animation: scroll-animation 5s linear 2s forwards;
+  animation: scroll-animation 4s linear 2s forwards;
 }
 @keyframes scroll-animation {
   0% {
@@ -92,7 +93,7 @@ body {
   }
   100% {
     opacity: 1;
-    left: 16px;
+    left: 24px;
   }
 }
 @keyframes slide2 {
@@ -101,7 +102,7 @@ body {
   }
   100% {
     opacity: 1;
-    left: 32px;
+    left: 48px;
   }
 }
 @keyframes slide3 {
@@ -110,7 +111,7 @@ body {
   }
   100% {
     opacity: 1;
-    left: 48px;
+    left: 72px;
   }
 }
 @keyframes slide4 {
@@ -119,12 +120,56 @@ body {
   }
   100% {
     opacity: 1;
-    left: 65px;
+    left: 96px;
   }
 }
 
 .main-page {
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(circle, rgba(2, 0, 36, 1) 11%, rgba(10, 114, 65, 1) 100%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(351deg, rgba(2, 0, 36, 1) 31%, rgba(10, 114, 65, 1) 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+.glass-card {
+  height: 80%;
+  width: 80%;
+  background-color: rgb(207, 207, 207, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+/* .img-text {
+  grid-column: 2/4;
+  grid-row: 1/2;
+} */
+
+.img-container {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  color: #fff;
+  font-size: 18px;
+}
+.img-box {
+  float: left;
+  clip-path: circle(110px at center);
+  shape-outside: ellipse(50% 50%);
+  margin-right: 10px;
+}
+.img-text {
+  padding: 40px 0 0 0;
+}
+.second-container {
+  grid-column: 1/4;
+  grid-row: 2;
+  color: #fff;
+  font-size: 18px;
+  padding: 0px 20px 0 20px;
+}
+.sec-text {
+  padding: 5px;
 }

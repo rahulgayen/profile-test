@@ -1,3 +1,6 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 let toID = setTimeout(() => {
     console.log("this is the third message");
     window.scrollBy({
@@ -5,4 +8,4 @@ let toID = setTimeout(() => {
         left: 0,
         behavior: 'smooth'
     });
-}, 7500);
+}, 5700);
