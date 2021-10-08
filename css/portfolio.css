@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+.load-page {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+}
+.name-box {
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: right;
+  position: relative;
+}
+.name-char {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.name-box > span:first-child {
+  opacity: 1;
+  color: rgb(10, 114, 65);
+  z-index: 5;
+}
+.name-box > span:nth-child(2) {
+  animation: slide1 500ms ease 100ms forwards;
+}
+.name-box > span:nth-child(3) {
+  animation: slide2 500ms ease 400ms forwards;
+}
+.name-box > span:nth-child(4) {
+  animation: slide3 500ms ease 600ms forwards;
+}
+.name-box > span:nth-child(5) {
+  animation: slide4 500ms ease 800ms forwards;
+}
+
+.scroll-box {
+  width: 300px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.scroll-item {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 48px;
+  color: #0a7241;
+  padding: 10px 5px;
+}
+.scroll-item:first-child,
+.scroll-item:last-child {
+  color: #000;
+}
+
+.scroll-inner {
+  animation: scroll-animation 5s linear 2s forwards;
+}
+@keyframes scroll-animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -480px;
+  }
+}
+
+@keyframes slide1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 16px;
+  }
+}
+@keyframes slide2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 32px;
+  }
+}
+@keyframes slide3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 48px;
+  }
+}
+@keyframes slide4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 65px;
+  }
+}
+
+.main-page {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 11%, rgba(10, 114, 65, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
