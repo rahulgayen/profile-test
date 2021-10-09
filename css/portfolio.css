@@ -8,6 +8,7 @@
 body {
   scroll-behavior: smooth;
   overflow-y: hidden;
+  background: #222;
 }
 
 .load-page {
@@ -19,6 +20,7 @@ body {
   align-items: center;
   font-family: "Ubuntu", sans-serif;
   gap: 5px;
+  animation: page-complete 200ms ease-in 6000ms forwards;
 }
 .name-box {
   width: 120px;
@@ -126,76 +128,86 @@ body {
     left: 96px;
   }
 }
-@media screen and (max-width: 400px) {
-  .load-page {
-    flex-direction: column;
+@keyframes page-complete {
+  0% {
+    transform: scaleX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0%);
+    opacity: 0.2;
   }
 }
 .main-page {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: linear-gradient(351deg, rgba(2, 0, 36, 1) 31%, rgba(10, 114, 65, 1) 95%);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: #fff;
 }
 .glass-card {
-  height: 80%;
-  width: 80%;
+  width: 70%;
   background-color: rgb(207, 207, 207, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-/* .img-text {
-  grid-column: 2/4;
-  grid-row: 1/2;
-} */
-
 .img-container {
-  grid-column: 1/4;
-  grid-row: 1/2;
-  color: #fff;
-  font-size: 18px;
+  padding: 20px;
 }
 .img-box {
+  background: url("https://picsum.photos/id/859/200?grayscale");
+  width: 200px;
+  aspect-ratio: 1;
   float: left;
-  clip-path: circle(110px at center);
-  shape-outside: ellipse(50% 50%);
-  margin-right: 10px;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+  margin-right: 1rem;
 }
 .img-text {
-  padding: 40px 0 0 0;
+  padding-top: 20px;
 }
 .second-container {
-  grid-column: 1/4;
-  grid-row: 2;
-  color: #fff;
-  font-size: 18px;
-  padding: 0px 20px 0 20px;
-}
-.sec-text {
-  padding: 5px;
+  padding: 10px 20px 20px 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (max-width: 412px) {
   .load-page {
     flex-direction: column;
+    align-items: center;
+  }
+  .main-page {
+    font-size: 14px;
+    height: max-content;
+    padding-bottom: 10px;
   }
   .glass-card {
-    display: flex;
-    flex-direction: column;
+    width: 90%;
+    margin: 20px;
   }
   .img-container {
-    color: #fff;
-    font-size: 18px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 5px 10px 10px 10px;
+  }
+  .img-box {
+    background: url("https://picsum.photos/id/859/120?grayscale");
+    width: 120px;
+    aspect-ratio: 1;
+    clip-path: circle(50%);
   }
   .img-text {
-    padding: 10px 5px;
+    padding-top: 5px;
+  }
+  .second-container {
+    padding: 5px 10px 10px 10px;
   }
 }

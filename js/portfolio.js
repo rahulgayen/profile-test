@@ -8,4 +8,4 @@ let toID = setTimeout(() => {
         left: 0,
         behavior: 'smooth'
     });
-}, 5700);
+}, 6200);
