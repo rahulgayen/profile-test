@@ -9,7 +9,9 @@ body {
   scroll-behavior: smooth;
   background: #222;
 }
-
+.container {
+  overflow-y: hidden;
+}
 .load-page {
   background: #000;
   height: 100vh;
