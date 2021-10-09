@@ -21,7 +21,7 @@ body {
   align-items: center;
   font-family: "Ubuntu", sans-serif;
   gap: 5px;
-  animation: page-complete 200ms ease-in 6000ms forwards;
+  animation: page-complete 200ms ease-in 6000ms;
 }
 .name-box {
   width: 120px;
