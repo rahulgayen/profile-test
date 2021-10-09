@@ -4,7 +4,7 @@ window.onbeforeunload = function () {
 let toID = setTimeout(() => {
     console.log("this is the third message");
     window.scrollBy({
-        top: window.innerHeight,
+        top: window.outerHeight,
         left: 0,
         behavior: 'smooth'
     });
