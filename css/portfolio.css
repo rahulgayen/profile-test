@@ -9,8 +9,10 @@ body {
   scroll-behavior: smooth;
   background: #222;
 }
-.container {
-  overflow-y: hidden;
+@media screen and (min-width: 700px) {
+  body {
+    overflow-y: hidden;
+  }
 }
 .load-page {
   background: #000;
@@ -179,10 +181,13 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  .container {
+    overflow-y: hidden;
+  }
   .load-page {
     flex-direction: column;
     align-items: center;
-    animation: page-complete 200ms ease-in 6000ms;
+    animation: page-complete 300ms ease-in 6000ms;
   }
   .main-page {
     font-size: 14px;
